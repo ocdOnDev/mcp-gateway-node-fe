@@ -20,7 +20,7 @@ uvicorn app:app --host 0.0.0.0 --port 8080 &
 
 to test the python backend, run from a shell
 
-curl -X POST http://localhost:8080/mcp/tools/invoke   -H "Content-Type: application/json"   -d '{
+curl -X POST http://macboobies.local:8080/mcp/tools/invoke   -H "Content-Type: application/json"   -d '{
     "tool": "get_weather",
     "args": {
       "location": "Amsterdam"
@@ -65,12 +65,14 @@ curl -X POST http://localhost:8080/mcp/tools/invoke   -H "Content-Type: applicat
 
 
 
-curl -v -k -X POST https://macboobies.local:8443/tool/weather   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Amsterdam"}'
+curl -v -k -X POST http://macboobies.local:8181/tool/weather   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Amsterdam"}'
 
- curl -X POST https://localhost:8443/tool/weather   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Amsterdam"}'
+ curl -v -k -X POST https://macboobies.local:8443/tool/weather   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Amsterdam"}'
 
 
 curl -X POST http://localhost:8080/   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Berlin"}'
+
+
 
 
 
