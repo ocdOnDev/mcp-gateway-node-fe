@@ -1,0 +1,29 @@
+{
+  "weather": {
+    "target": "http://macboobies.local:8080",
+    "pathRewrite": { "^/?$": "/mcp/tools/invoke" },
+    "secure": false,
+    "description": "Gets the weather for a given city",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "location": { "type": "string", "description": "Name of the city" }
+      },
+      "required": ["location"]
+    }
+  },
+  "timesheet": {
+    "target": "http://macboobies.local:8080",
+    "pathRewrite": { "^/?$": "/mcp/tools/invoke" },
+    "secure": false,
+    "description": "Fetch or post employee timesheets",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "employeeId": { "type": "integer" },
+        "date": { "type": "string", "format": "date" }
+      },
+      "required": ["employeeId"]
+    }
+  }
+}

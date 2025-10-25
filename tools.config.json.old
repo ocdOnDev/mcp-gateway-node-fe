@@ -1,0 +1,17 @@
+{
+  "weather": {
+    "target": "http://localhost:5001",
+    "pathRewrite": { "^/tool/weather": "/" },
+    "secure": false
+  },
+  "timesheet": {
+    "target": "http://localhost:5002",
+    "pathRewrite": { "^/tool/timesheet": "/" },
+    "secure": false
+  },
+  "generate": {
+    "target": "http://localhost:5003",
+    "pathRewrite": { "^/tool/generate": "/" },
+    "secure": false
+  }
+}
