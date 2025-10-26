@@ -56,7 +56,7 @@ gentoken
 
 
 <!-- test both backend and frontend -->
-curl -X POST http://localhost:8080/mcp/tools/invoke   -H "Content-Type: application/json"   -d '{
+curl -X POST http://macboobies.local:8080/mcp/tools/invoke   -H "Content-Type: application/json"   -d '{
     "tool": "get_weather",
     "args": {
       "location": "Amsterdam"
@@ -70,9 +70,9 @@ curl -v -k -X POST http://macboobies.local:8181/tool/weather   -H "Authorization
  curl -v -k -X POST https://macboobies.local:8443/tool/weather   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Amsterdam"}'
 
 
-curl -X POST http://localhost:8080/   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Berlin"}'
+curl -X POST http://macboobies.local:8080/   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Berlin"}'
 
 
 
 
-
+curl -v -k -X POST https://api.birdkokane.com/tool/weather   -H "Authorization: Bearer $JWT_TOKEN"   -H "Content-Type: application/json"   -d '{"location": "Amsterdam"}'

@@ -80,11 +80,11 @@ const openapi = {
 
 // === Register Tools Dynamically ===
 Object.entries(tools).forEach(([name, cfg]) => {
-  //registerTool(app, name, cfg, openapi);
+  registerTool(app, name, cfg, openapi);
 });
 
 
-
+/*  MCP Bridge Endpoint
   app.use("/tool/:name", async (req, res) => {
     const toolName = req.params.name;
     const args = req.body;
@@ -111,6 +111,7 @@ Object.entries(tools).forEach(([name, cfg]) => {
       res.status(500).json({ error: "MCP bridge failed", detail: err.message });
     }
   });
+  */
 
 
 
